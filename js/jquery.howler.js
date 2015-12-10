@@ -4,7 +4,7 @@
 // timeout is in milliseconds (default: 5000)
 (function ($) {
 
-  var $body = $('body'), howl_id = 1;
+  var $body = $('body'), howl_id = 1, animationTime = 500;
 
   $body.on('click', '.howl', dismissHowl);
 
@@ -19,8 +19,8 @@
       $howl.toggleClass('show', false);
       setTimeout(function(){
         $howl.remove();
-      },300);
-    },300);
+      },animationTime);
+    },animationTime);
   }
 
   $.extend({
@@ -49,8 +49,8 @@
       $('#howl-c .inner-c').append(newHowl);
       var $thisHowl = $('#howl-c').find('.howl[data-id="'+(thisHowl.id)+'"]');
       setTimeout(function(){
-        $thisHowl.toggleClass('open', true);
-      },300);
+        $thisHowl.toggleClass('open', true).css('height', $thisHowl.height());
+      },animationTime);
 
       if (!thisHowl.sticky) {
 
@@ -61,8 +61,8 @@
             $thisHowl.toggleClass('show', false);
             setTimeout(function(){
               $thisHowl.remove();
-            },300);
-          },300);
+            },animationTime);
+          },animationTime);
 
         },thisHowl.timeout);
       }

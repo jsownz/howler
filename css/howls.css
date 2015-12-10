@@ -3,7 +3,7 @@
   right: 10px;
   top: 0px;
   z-index: 0;
-  text-align: right;
+  text-align: left;
   height: 100%;
   overflow: hidden;
 }
@@ -17,25 +17,27 @@
   margin-top: 30px;
   margin-bottom: 10px;
   cursor: pointer;
+  overflow: hidden;
   z-index: 9999;
-  -webkit-transition: all 300ms cubic-bezier(0, 0, 0, 0.82);
-     -moz-transition: all 300ms cubic-bezier(0, 0, 0, 0.82);
-      -ms-transition: all 300ms cubic-bezier(0, 0, 0, 0.82);
-       -o-transition: all 300ms cubic-bezier(0, 0, 0, 0.82);
-          transition: all 300ms cubic-bezier(0, 0, 0, 0.82);
+  -webkit-transition: all 500ms cubic-bezier(0, 0, 0, 0.82);
+     -moz-transition: all 500ms cubic-bezier(0, 0, 0, 0.82);
+      -ms-transition: all 500ms cubic-bezier(0, 0, 0, 0.82);
+       -o-transition: all 500ms cubic-bezier(0, 0, 0, 0.82);
+          transition: all 500ms cubic-bezier(0, 0, 0, 0.82);
 }
 
 #howl-c .howl .inner {
   background: rgba(0,0,0,.7);
-  border-radius: 8px;
-  max-width: 350px;
+  border-radius: 5px;
+  width: 300px;
   display: inline-block;
 }
 
 #howl-c .howl p {
-  padding: 10px;
+  padding: 10px 15px 12px 15px;
   margin: 0;
   color: white;
+  font-size: 1em;
 }
 
 #howl-c .howl.show {
@@ -49,4 +51,5 @@
 
 #howl-c .howl.open.hide {
   opacity: 0;
+  height: 0 !important;
 }
