@@ -1,4 +1,9 @@
-//usage: $.howl(message,sticky,timeout);
+// howler v0.0.2 by Jason Sohl
+// tiny js library for growl-style messages with
+// custom sticky option and timeout
+
+// usage: $.howl(message,sticky,timeout);
+
 // message is any text
 // sticky is true or false (default: false)
 // timeout is in milliseconds (default: 5000)
